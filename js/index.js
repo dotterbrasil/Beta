@@ -56,6 +56,8 @@ var app = {
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
+	aplicativo('leitorweb');
+
         scanner.scan( function (result) { 
 
             alert("We got a barcode\n" + 
