@@ -21,21 +21,7 @@ document.getElementById('pop').style.display='block';
 
 function decodifica() {
 
-plataforma = navigator.userAgent;
-teste_android = plataforma.search("Linux");
-teste_iphone = plataforma.search("iPhone");
-
-if(teste_android>-1){alert("Dispositivo Android detectado.");
-	parent.aplic.location.href="zxing://scan/?ret="+escape('resultado_leitor.php?codigo={CODE}')+"&SCAN_FORMATS=UPC_A,EAN_13,QR_CODE,DATAMATRIX";
-	} else {
-		if(teste_iphone>-1){
-			alert("Este sistema limita-se a leitura de QRCode em dispositivos Apple.");
-			parent.aplic.location.href="zxing://scan/?ret="+escape('resultado_leitor.php?codigo={CODE}')+"&SCAN_FORMATS=UPC_A,EAN_13,QR_CODE,DATAMATRIX";
-			} else {
-			alert("Você não está utilizando um dispositivo móvel. Conecte um leitor de códigos 2D para prosseguir.");
-			parent.aplic.location.href="../aplicativos/leitor.htm";
-			}
-		}
+scan;
 
 }
 
